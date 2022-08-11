@@ -5,10 +5,10 @@ from PySimpleGUI import PySimpleGUI as sg
 senha=[]
 
 #layout
-sg.theme('Reddid')
+sg.theme('Black')
 layout=[
     [sg.Text('digiteo numero de caracteres sua senha deve ter'), sg.Input(key='caracteres')],
-    [sg.Text(f'{senha}')],
+    [sg.Text(f'{senha}', key='xx')],
     [sg.Button('gerar')],
 
 ]
@@ -20,10 +20,12 @@ while True:
     if eventos == sg.WIN_CLOSED:
         break
     if eventos == 'gerar':
-        for i in valores['caracteres']:
-            for i in range(2):
-                senha.append(choice('adfg'))
+        for i in range(int(valores['caracteres'])):
+            senha.append(choice('adf'))
+        valores['xx']='oi'
+    
 
+         
 
-
+print(senha)
 
