@@ -22,7 +22,8 @@ while True:
     if eventos == 'gerar':
         for i in range(int(valores['caracteres'])):
             senha.append(choice('adf'))
-        valores['xx']='oi'
+    senha=''.join(senha)
+    janela['xx'].update(f'sua senha: {senha}')
     
 
          
