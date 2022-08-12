@@ -8,6 +8,7 @@ senha=[]
 sg.theme('Black')
 layout=[
     [sg.Text('digiteo numero de caracteres sua senha deve ter'), sg.Input(key='caracteres')],
+    [sg.Checkbox('senha forte',key='senha forte')],
     [sg.Text(f'{senha}', key='xx')],
     [sg.Button('gerar')],
 
@@ -24,9 +25,10 @@ while True:
             senha.append(choice('abcdefjhilmnopqrstuvwxyv1234567890'))
     senha=''.join(senha)
     janela['xx'].update(f'sua senha: {senha}')
+    senha=[]
     
 
          
 
-print(senha)
+
 
