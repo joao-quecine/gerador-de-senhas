@@ -15,9 +15,9 @@ layout=[
 ]
 
 #janela
-janela=sg.Window('gerador de senha',layout)
+janela=sg.Window('gerador de senha',layout, element_justification='c')
 while True:
-    eventos, valores= janela.read()
+    eventos, valores= janela.read(timeout=1)
     if eventos == sg.WIN_CLOSED:
         break
 
@@ -50,6 +50,11 @@ while True:
             elif valores['sm']==True and valores['lm']==False and valores['nm']==False:
                 for i in range(int(valores['caracteres'])):
                     senha.append(choice('abcdefghijklmnopqrstuvwxyz@#*&%$!_-{.}'))
+
+            elif valores['sm']==False and valores['lm']==False and valores['nm']==False:
+                for i in range(int(valores['caracteres'])):
+                    senha.append(choice('abcdefghijklmnopqrstuvwxyz'))
+
                 
                          
             
