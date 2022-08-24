@@ -8,8 +8,8 @@ senha=[]
 #layout
 sg.theme('Black')
 layout=[
-    [sg.Text('digite o numero de caracteres sua senha deve ter'), sg.Input(key='caracteres', size=(2,0))],
-    [sg.Check('letras maiusculas', key='lm'),sg.Check('numeros', key='nm'), sg.Check('simbulos', key='sm')],
+    [sg.Text('digite o numero de caracteres que sua senha deve ter'), sg.Input(key='caracteres', size=(2,0))],
+    [sg.Check('letras maiusculas', key='lm'),sg.Check('numeros', key='nm'), sg.Check('simbolos', key='sm')],
     [sg.Text('sua senha: ', key='xx')],
     [sg.Button('gerar')],
 ]
@@ -17,7 +17,7 @@ layout=[
 #janela
 janela=sg.Window('gerador de senha',layout, element_justification='c')
 while True:
-    eventos, valores= janela.read(timeout=1)
+    eventos, valores= janela.read(timeout=6)
     if eventos == sg.WIN_CLOSED:
         break
 
