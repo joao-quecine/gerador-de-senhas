@@ -1,1 +1,1 @@
-# quecine-git1
+# gerador de senhas
